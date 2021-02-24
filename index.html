@@ -13,17 +13,26 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
 
+
 	<link rel="stylesheet" href="css/style.css">
+
+
 	<title>Business Landing</title>
 </head>
 
 <body>
 	<header class="header">
-		<div class="header__top clearfix">
+		<div class="header__top">
 			<div class="container">
-				<a href="tel:380963092145" class="header__phone"> +38 (096) 309 21 45</a>
-				<a href="#" class="header__email">layout585@gmail.com</a>
-				<a data-fancybox data-src="#modal" href="javascript:;" class="header__btn"> Бесплатная консультация </a>
+				<div class="header__block">
+					<div class="header__contacts">
+						<a href="tel:380963092145" class="header__phone"> +38 (096) 309 21 45</a>
+						<a href="#" class="header__email">layout585@gmail.com</a>
+					</div>
+
+					<a class="header__btn"> Бесплатная консультация </a>
+				</div>
+
 			</div>
 		</div>
 		<div class="header__content">
@@ -34,14 +43,16 @@
 							<img src="img/logo.png" alt="">
 						</a>
 					</div>
-					<nav class="menu">
+
+
+					<nav class="menu" id="menu">
 						<ul>
 							<li><a href="#">Главная</a></li>
 							<li><a href="#">О компании</a></li>
 							<li><a href="#">Услуги</a></li>
 							<li><a href="#">Контакты</a></li>
-
 						</ul>
+
 					</nav>
 				</div>
 
@@ -104,7 +115,7 @@
 
 
 	<!-- services -->
-	<section class="services">
+	<!-- <section class="services">
 		<div class="container">
 			<div class="services__top">
 				<div class="services__title-box">
@@ -155,7 +166,7 @@
 				</div>
 
 			</div>
-	</section>
+	</section> -->
 
 
 	<!-- about -->
@@ -258,7 +269,7 @@
 
 
 	<!-- news -->
-	<section class="news">
+	<!-- <section class="news">
 		<div class="container">
 			<div class="services__top">
 				<div class="services__title-box">
@@ -331,21 +342,66 @@
 				</a>
 			</div>
 		</div>
+	</section> -->
+
+
+	<section class="contacts">
+		<div class="container">
+			<div class="contacts__inner">
+				<div class="contacts__desc">
+					<div class="contacts__title">Комплексное закрытие предприятия</div>
+					<div class="contacts__text">Полное прекращение существования юридического лица с сохранением легальности всей
+						предыдущей деятельности.</div>
+					<a class=" contacts__btn"> Бесплатная консультация </a>
+					<div class="contacts__social">
+						<ul>
+							<li class="social__item social__item-default social__item-tel"><a class="social__link social__link-tel"
+									href="tel://380963092145">+38 (096) 309 21 45 </a></li>
+							<li class="social__item social__item-default social__item-email"><a
+									class="social__link social__link-email" href="mailto: layout585@gmail.com">layout585@gmail.com</a>
+							</li>
+							<li class="social__item social__item-default social__item-location">Киев, ул.Пушиной, 13 </li>
+						</ul>
+					</div>
+				</div>
+				<div id="map" class="contacts__map"></div>
+			</div>
+		</div>
 	</section>
 
 
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__text">&copy; 2017 Template by Anastasia Shaposhnyk. Все права защищены.</div>
 
+			</div>
+		</div>
+	</footer>
 
-
-	<div id="modal">
-		<h2>Hello!</h2>
-		<p>You are awesome!</p>
-	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script>
+
+		let map;
+
+		function initMap() {
+			map = new google.maps.Map(document.getElementById("map"), {
+				center: { lat: -34.397, lng: 150.644 },
+				zoom: 8,
+			});
+		}
+
+
+	</script>
+	<script async
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1-O-azI0xUJl0bNSFIS1giHXBHW4wkI8&callback=initMap">
+		</script>
 	<script src="js/main.js"></script>
 </body>
 
 </html>
+
+<!-- AIzaSyB1-O-azI0xUJl0bNSFIS1giHXBHW4wkI8 -->

@@ -1,0 +1,25 @@
+/* mobile version */
+
+@media (max-width: 660px) {
+	/* header */
+
+	.header__block {
+		display: block;
+		text-align: center;
+	}
+	.header__btn {
+		margin-bottom: 10px;
+	}
+
+	/* nav */
+	.hamburger {
+		visibility: visible;
+		opacity: 1;
+	}
+	.menu {
+		display: none;
+		position: relative;
+	}
+	
+	.menu li{display: block;}
+}
